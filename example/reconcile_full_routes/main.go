@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	linuxroute "linux_route"
+	linuxroute "github.com/jursonmo/linux_route"
 )
 
 // dryRunManager is a demo RouteManager: it does not touch the OS,

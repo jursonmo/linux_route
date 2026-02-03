@@ -60,7 +60,7 @@ import (
   "context"
   "log"
 
-  linuxroute "linux_route"
+  linuxroute "github.com/jursonmo/linux_route"
 )
 
 func main() {

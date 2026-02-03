@@ -1,4 +1,4 @@
-module linux_route
+module github.com/jursonmo/linux_route
 
 go 1.22.3
 

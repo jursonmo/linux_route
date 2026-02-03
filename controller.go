@@ -18,6 +18,17 @@ type ReconcileResult struct {
 	Diff DiffResult
 }
 
+func NewController(manager RouteManager, store RouteStore) *Controller {
+	return &Controller{
+		Manager: manager,
+		Store:   store,
+	}
+}
+
+func NewControllerWithFileStore(path string) *Controller {
+	return NewController(&IPRouteManager{}, &FileStore{Path: path})
+}
+
 // Reconcile compares desiredRoutes with previously saved routes, then:
 // - deletes routes that should no longer exist
 // - adds routes that are missing
